@@ -5,6 +5,11 @@ require 'random_data'
         title: RandomData.random_sentence,
         body: RandomData.random_paragraph
         )
+    Advertisement.create!(
+        title: RandomData.random_sentence,
+        body: RandomData.random_paragraph,
+        price: Random.new(1000)
+        )
 end
 posts = Post.all
 
