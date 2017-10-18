@@ -5,6 +5,11 @@ require 'random_data'
         title: RandomData.random_sentence,
         body: RandomData.random_paragraph
         )
+    Question.create!(
+        title: RandomData.random_sentence,
+        body: RandomData.random_paragraph,
+        resolved: 0
+        )
 end
 posts = Post.all
 
@@ -16,5 +21,6 @@ posts = Post.all
 end
 
 puts "Seed finished"
+puts "#{Question.count} questions created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
